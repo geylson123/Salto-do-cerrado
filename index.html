@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Salto do Cerrado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Salto do Cerrado</h1>
+    <span class="tag">Junte moedas e chegue à bandeira.</span>
+  </header>
+
+  <section class="hud" aria-label="Placar">
+    <div class="stat"><span class="k">Pontos</span><span class="v" id="sScore">0</span></div>
+    <div class="stat"><span class="k">Moedas</span><span class="v" id="sCoins">0/0</span></div>
+    <div class="stat"><span class="k">Fase</span><span class="v" id="sLevel">1</span></div>
+    <div class="stat"><span class="k">Recorde</span><span class="v" id="sBest">0</span></div>
+    <div class="stat"><span class="k">Vidas</span><span class="pips" id="sLives" aria-live="polite"></span></div>
+  </section>
+
+  <div class="stage">
+    <canvas id="game" aria-label="Fase do jogo"></canvas>
+    <div class="overlay" id="overlay">
+      <div class="card">
+        <h2 id="ovTitle">Salto do Cerrado</h2>
+        <p id="ovText">Guie o tatu por duas fases. Pule em cima dos besouros, desvie dos espinhos e não caia nos buracos.</p>
+        <button class="primary" id="ovBtn" type="button">Começar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pad" aria-label="Controles de toque">
+    <button type="button" id="btnL" aria-label="Andar para a esquerda">&larr;</button>
+    <button type="button" id="btnR" aria-label="Andar para a direita">&rarr;</button>
+    <button type="button" id="btnJ" class="jump" aria-label="Pular">PULAR</button>
+  </div>
+
+  <div class="row">
+    <button type="button" id="btnPause">Pausar</button>
+    <button type="button" id="btnSound">Som: ligado</button>
+  </div>
+
+  <p class="help">Teclado: <kbd>&larr;</kbd> <kbd>&rarr;</kbd> ou <kbd>A</kbd> <kbd>D</kbd> para andar, <kbd>Espaço</kbd>, <kbd>&uarr;</kbd> ou <kbd>W</kbd> para pular (segure para saltar mais alto), <kbd>P</kbd> para pausar.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
